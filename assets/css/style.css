@@ -246,11 +246,17 @@ nav .div{
 }
 #bigNav{
   width: 100%;
+  margin-top: 50px;
   height: 47px;
   background-color: #fff;
   overflow-x: scroll;
   overflow-y: hidden;
   box-shadow: 0 1px 1px 0 rgba(0,0,0,.16);
+}
+@media all and (max-width: 540px){
+  #bigNav{
+    margin-top: 97px;
+  }
 }
 #bigNav::-webkit-scrollbar {
   height: 0px;
@@ -442,17 +448,17 @@ footer .col-sm .span{
   background-color: #2b2e34;width: 111.5% !important;margin-left: -6% !important;padding-top: 15px;padding-bottom: 15px;
 }
 .jiji-mini{
-  display: flex;background-color: #261f2f;justify-content: space-between;
+  display: flex;justify-content: center;
 }
 .social-linker{
-  display: flex;justify-content: space-around;width: 170px;align-items: center;background-color: #28346f;
+  display: flex;justify-content: space-around;width: 170px;align-items: center;
 }
 .social-linker a{
   width: 30px;height: 30px; border-radius: 50%; background-color: #3B5998; display: flex;justify-content: center;align-items: center;
 }
 @media all and (max-width: 576px){
   footer .col-sm{
-    margin-bottom: 10px !important;
+    margin-bottom: 23px !important;
   }
 }
 footer input[type='submit']{
