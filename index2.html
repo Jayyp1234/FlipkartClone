@@ -5,42 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up Page
     </title>
-    <meta name="theme-color" content="#2378ce">
-    <link href="assets/css/style.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-    <link href="assets/fonts/icomoon/style.css" rel="stylesheet">
 </head>
-
+<style type="text/css">
+	.table-bordered, tr, td, th {
+    	border: 1px solid #dee2e6 !important;
+    	padding: 0.5em;
+	}
+	.table {
+   		width: 90%;
+   		margin: auto;
+   		margin-bottom: 1rem;
+   		color: #212529;
+	}
+	table {
+    	border-collapse: collapse;
+    	display: table;
+    	box-sizing: border-box;
+    	border-spacing: 2px;
+    	border-color: grey;
+	}
+	h1{
+		text-align: center;
+	}
+</style>
 <body>
-	<header style="height: 50px;display: flex;justify-content: flex-end;padding: 30px;">
-		<div class="social-linker">
-          <a href="#" style="background-color: #1DA1F2;" ><i class="icon-home" style="color: white;"></i></a>
-          <a href="#" style="background-color: red;"><i class="icon-message" style="color: white;"></i></a>
-          <a href="#" style="background-color: #3B5998;" ><i class="icon-facebook" style="color: white;"></i></a>
-        </div>
-	</header>
-	<style type="text/css">
-	</style>
-	<nav style="background-color: #154ba0;padding-top: 30px;padding-bottom: 30px;">
-		<div style="display: flex;justify-content: center;">
-			<img src="assets/img/logo.jpg" class="img-fluid">
-			<div style="display: grid;">
-				<div style="display: flex;justify-content: flex-end;">
-					<img src="assets/img/donate.jpg" class="img-fluid">
-				</div>
-				<img src="assets/img/title.jpg" class="img-fluid">
-			</div>
-			
-		</div>
-	</nav>
+	<h1>Product Description</h1>
+	<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+    </tbody>
+  </table>
 </body>
-<script type="text/javascript" src="assets/js/jquery.min.js"></script>
-<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 <script type="text/javascript">
-  $(document).ready(function(){
-   
-  });
-  
   
 </script>
 

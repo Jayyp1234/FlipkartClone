@@ -20,10 +20,6 @@ body {
     border: none;
     outline: none;
 }
-*:hover {
-    border: none;
-    outline: none;
-}
 a {
     text-decoration: none !important;
     color: inherit !important;
