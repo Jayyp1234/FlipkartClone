@@ -67,7 +67,7 @@ nav .div{
   font-size: 90%;
 }
 .form input[type='text']{
-  width: 290px;
+  width: 490px;
   height: 35px;
   padding-left: 20px;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,.23);
@@ -108,7 +108,7 @@ nav .div{
 .index-form{
   display: none !important;
 }
-@media all and (max-width: 800px){
+@media all and (max-width: 900px){
     .form input[type='text']{
         width: 290px;
     }
@@ -165,8 +165,8 @@ nav .div{
     position:absolute;
     background-color: white;
     width: 260px;
-    right: 0%;
-    top: 50px;
+    right: 3.5%;
+    top: 55px;
     color: black;
     border:1px solid #e8e8e8;
     display: none;
