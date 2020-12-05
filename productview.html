@@ -473,6 +473,21 @@
 .row {padding-left: 10px;}
 .row > .column > img{width: 100%;height: 70px !important;border: 3px solid #f1f1f1;padding: 2px;}
 .hover-shadow:hover {box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+@media all and (max-width: 600px){
+  .modal-body{
+    border:none !important;
+  }
+  #overview{
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+  }
+}
+.img-zoom-container {
+    position: relative;
+    display: grid;
+    align-items: top;
+    height: 480px;
+}
 </style>
 <section class="container-fluid" style="margin-top: 10px;">
   <div class="rower">
@@ -488,30 +503,14 @@
         </div>
         <div class="image-display">
           <div class="img-zoom-container">
-            <img id="myimage" src="Product Description/images/views/Black/image3_view1.png" width="400px" height="480px">
+            <img id="myimage" src="Product Description/images/views/Black/image3_view1.png" width="400px" height="auto">
             <div id="myresult" class="img-zoom-result"></div>
           </div>
           <div class="button-adds-up">
             <button type="button" class="btn"><span style=""> Add to Cart</span></button>
             <button type="button" class="btn" style="background-color: #1e7ade;"><span > Buy Now</span></button>
           </div>
-          <div class="button-adds">
-            <span>Size:</span>
-            <div>
-              <button type="button" style="padding: 2px 4px;font-size: 90%;" class="btn btn-outline-primary">40</button>
-              <button type="button" style="padding: 2px 4px;font-size: 90%;" class="btn btn-outline-primary">40</button>
-              <button type="button" style="padding: 2px 4px;font-size: 90%;" class="btn btn-outline-primary">40</button>
-              <button type="button" style="padding: 2px 4px;font-size: 90%;" class="btn btn-outline-primary">40</button>
-              <button type="button" style="padding: 2px 4px;font-size: 90%;" class="btn btn-outline-primary">40</button>
-            </div>
-          </div>
-          <div class="button-adds">
-            <span>Color:</span>
-            <div>
-              <button type="button" style="padding:12px 12px;font-size: 90%;" class="btn bg-dark"></button>
-              <button type="button" style="padding:12px 12px;font-size: 90%;" class="btn bg-warning"></button>
-            </div>
-          </div>
+          
         </div>
       </div>
     </div>
@@ -524,7 +523,7 @@
         <a href="index.html">Black Shoes</a> 
       </span> 
       <br>
-      <div id="demo" class="carousel slide" data-ride="carousel">
+      <div id="demo" class="carousel mini-slide slide" data-ride="carousel">
 
           <!-- Indicators -->
           <ul class="carousel-indicators">
@@ -587,8 +586,7 @@
            <span class="view-less">View less</span>
         </div>
       </ul>
-      <div class="sizecolor">
-        <div class="button-adds">
+      <div class="button-adds">
             <span>Size:</span>
             <div>
               <button type="button" style="padding: 2px 4px;font-size: 90%;" class="btn btn-outline-primary">40</button>
@@ -597,16 +595,14 @@
               <button type="button" style="padding: 2px 4px;font-size: 90%;" class="btn btn-outline-primary">40</button>
               <button type="button" style="padding: 2px 4px;font-size: 90%;" class="btn btn-outline-primary">40</button>
             </div>
-          </div>
+          </div> <br>
           <div class="button-adds">
             <span>Color:</span>
-            <div>
-              <button type="button" style="padding:12px 12px;font-size: 90%;" class="btn bg-dark"></button>
-              <button type="button" style="padding:12px 12px;font-size: 90%;" class="btn bg-warning"></button>
-              <button type="button" style="padding:12px 12px;font-size: 90%;background-color: brown;" class="btn "></button>
+            <div class="color"> <button type="button" data-toggle="tooltip" title="Black" style="padding:12px 12px;font-size: 90%;" class="btn bg-dark black"></button>
+              <button type="button" data-toggle="tooltip" title="Brown" style="padding:12px 12px;font-size: 90%;" class="btn bg-warning brown"></button> 
+              <button type="button" data-toggle="tooltip" title="Golden" style="padding:12px 12px;font-size: 90%;background-color: brown;" class="btn golden"></button>
             </div>
-          </div>
-      </div>
+          </div><br>
        <div class="modal-body" style="padding: 0px;border:3px solid #dadada;">
          <ul class="nav nav-tabs nav-tabs-phase description-scroll" role="tablist" style="background-color: #dadada;border:1px solid #dadada;">
           <li class="nav-item">
@@ -935,6 +931,7 @@
 <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 <script type="text/javascript">
   $(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
   });
   $('.view-more').click(function(){
     $('.li').slideToggle();
@@ -978,6 +975,29 @@
     $(this).css('color' , 'white');
     $(this).siblings().removeClass('bg-primary').css('color' , '#007bff');
   });
+  $('.color > .black').click(function(){
+    $('.image-display img').attr('src' , 'Product Description/images/views/Black/image3_view1.png');
+    for(i=0; i<7 ; i++){
+      $('.hover-image img, .mini-slide .carousel-item img').eq(i-1).attr('src' , 'Product Description/images/views/Black/image3_view'+i+'.png');
+      $('.mini-slide .carousel-item img').eq(i-1).attr('src' , 'Product Description/images/views/Black/image3_view'+i+'.png');
+    }
+    
+  });
+  $('.color > .brown').click(function(){
+    for(i=0; i<7 ; i++){
+      $('.hover-image img').eq(i-1).attr('src' , 'Product Description/images/views/Brown/image2_view'+i+'.png');
+      $('.mini-slide .carousel-item img').eq(i-1).attr('src' , 'Product Description/images/views/Brown/image2_view'+i+'.png');
+    }
+    $('.image-display img').attr('src' , 'Product Description/images/views/Brown/image2_view1.png');
+  });
+  $('.color > .golden').click(function(){
+    for(i=0; i<7 ; i++){
+      $('.hover-image img, .mini-slide .carousel-item img').eq(i-1).attr('src' , 'Product Description/images/views/golden/image1_view'+i+'.png');
+      $('.mini-slide .carousel-item img').eq(i-1).attr('src' , 'Product Description/images/views/golden/image1_view'+i+'.png');
+    }
+    $('.image-display img').attr('src' , 'Product Description/images/views/golden/image1_view1.png');
+  });
+  $('[data-toggle="tooltip"]').tooltip();
   imageZoom("myimage", "myresult");
 </script>
 
